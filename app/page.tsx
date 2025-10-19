@@ -1,103 +1,132 @@
-import Image from "next/image";
+// app/page.tsx
+import React from 'react';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <section className="hero">
+        <div className="container hero-grid">
+          <div className="hero-content">
+            <h1>Portable ECG Holter + AI analysis</h1>
+            <p className="lead">
+              CareTech Innovation brings clinical-grade ECG analysis to the palm of your hand.
+              Easy-to-use portable ECG Holter hardware combined with an AI mobile app that
+              interprets results and explains them in plain language.
+            </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="hero-actions">
+              <a href="#device" className="btn btn-primary">Explore the Device</a>
+              <a href="#ai-app" className="btn btn-outline">See AI App</a>
+            </div>
+
+            <ul className="quick-features">
+              <li>24/7 Holter-capable monitoring</li>
+              <li>AI-first ECG interpretation</li>
+              <li>Patient-friendly reports & alerts</li>
+            </ul>
+          </div>
+
+          <div className="hero-visual">
+            <div className="device-mock">
+              {/* placeholder visual box */}
+              <div className="device-screen">Portable ECG Holter</div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section id="mission" className="section container">
+        <h2>Our Mission</h2>
+        <p>
+          At CareTech Innovation we believe early detection and accessible monitoring save lives.
+          We design patient-first hardware and AI tools to democratize cardiac health — making
+          continuous ECG monitoring affordable and simple for home use.
+        </p>
+      </section>
+
+      <section id="device" className="section alt-bg">
+        <div className="container device-grid">
+          <div className="device-image">
+            <div className="device-box">ECG Holter Device (image)</div>
+          </div>
+          <div className="device-copy">
+            <h3>Portable ECG Holter — Clinical-grade, pocket-sized</h3>
+            <p>
+              Our Holter device records multi-lead ECG data securely, stores locally, and syncs
+              with the mobile app. Lightweight, rechargeable, and designed for day/night use.
+            </p>
+
+            <ul className="device-points">
+              <li>Continuous monitoring for up to 48+ hours</li>
+              <li>Automatic data upload via Bluetooth</li>
+              <li>Encrypted patient data & privacy-first design</li>
+            </ul>
+
+            <a className="btn btn-primary" href="#contact">Request a Demo</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="ai-app" className="section container">
+        <h2>AI Mobile App — Understand your ECG</h2>
+        <p>
+          The mobile app runs AI models to detect rhythms (sinus, bradycardia, tachycardia,
+          AFib alerts, etc.) and produces an easy-to-read patient report with recommended next steps.
+        </p>
+
+        <div className="features-grid">
+          <div className="feature-card">
+            <h4>Automated Analysis</h4>
+            <p>Instant interpretation with clear explanation tailored for patients.</p>
+          </div>
+
+          <div className="feature-card">
+            <h4>Clinician Mode</h4>
+            <p>Exportable ECG waveforms and PDF reports for doctor review.</p>
+          </div>
+
+          <div className="feature-card">
+            <h4>Alerts & History</h4>
+            <p>Push alerts for concerning rhythms and a history timeline for trends.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" className="section cta-section">
+        <div className="container cta-grid">
+          <div>
+            <h3>Ready to see it in action?</h3>
+            <p>Request a demo, pilot program, or clinical partnership.</p>
+          </div>
+          <div>
+            <a href="#contact" className="btn btn-primary large">Get a Demo</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="section container">
+        <h2>Contact / Request Demo</h2>
+        <p>Send us a message and we’ll get back within 48 hours.</p>
+
+        <form id="contactForm" action="/api/contact" method="post" className="contact-form">
+          <label>
+            Name
+            <input name="name" required />
+          </label>
+
+          <label>
+            Email
+            <input name="email" type="email" required />
+          </label>
+
+          <label>
+            Message
+            <textarea name="message" rows={5} required />
+          </label>
+
+          <button type="submit" className="btn btn-primary">Send Message</button>
+        </form>
+      </section>
+    </>
   );
 }
