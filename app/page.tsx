@@ -6,10 +6,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>CareTech Innovation</title>
+        <title>CareTech Innovation – The Future of Smart Healthcare</title>
         <meta
           name="description"
-          content="Revolutionizing Healthcare with AI and Portable ECG Technology"
+          content="CareTech Innovation is transforming healthcare with AI-powered portable ECG devices for real-time heart and blood pressure monitoring."
+        />
+        <meta
+          name="keywords"
+          content="AI healthcare, portable ECG, medical technology, heart monitoring, blood pressure device, CareTech Innovation, smart health"
         />
       </Head>
 
@@ -29,7 +33,14 @@ export default function Home() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              {["Home", "Features", "Device", "Mission", "Contact"].map((s) => (
+              {[
+                "Home",
+                "Features",
+                "Device",
+                "Preorder",
+                "Mission",
+                "Contact",
+              ].map((s) => (
                 <li className="nav-item" key={s}>
                   <a className="nav-link" href={`#${s.toLowerCase()}`}>
                     {s}
@@ -47,17 +58,18 @@ export default function Home() {
         className="vh-100 d-flex flex-column justify-content-center align-items-center text-center text-white"
         style={{
           background:
-            "linear-gradient(180deg,#081330 0%, #071827 100%)",
+            "linear-gradient(180deg,#07131f 0%, #0b243b 100%)",
         }}
       >
         <div className="container">
-          <h1 className="display-4 fw-bold">Revolutionizing Healthcare</h1>
+          <h1 className="display-4 fw-bold">Redefining Heart Health</h1>
           <p className="lead mb-4">
-            AI-powered portable ECG technology for every home.
+            AI-powered portable ECG and blood pressure monitoring—accessible,
+            accurate, and intelligent.
           </p>
           <div>
-            <a href="#device" className="btn btn-teal me-2">
-              Explore Device
+            <a href="#preorder" className="btn btn-teal me-2">
+              Preorder Now
             </a>
             <a href="#contact" className="btn btn-outline-teal">
               Contact Us
@@ -69,20 +81,20 @@ export default function Home() {
       {/* FEATURES */}
       <section id="features" className="py-5 bg-light text-center">
         <div className="container">
-          <h2 className="fw-bold mb-4">Core Features</h2>
+          <h2 className="fw-bold mb-4">Key Innovations</h2>
           <div className="row g-4">
             {[
               {
                 title: "AI ECG Analysis",
-                text: "Instant AI-driven ECG report interpretation for clear understanding.",
+                text: "Get instant AI-driven ECG and heart rhythm analysis with clinical precision.",
               },
               {
-                title: "Accessibility",
-                text: "Portable and easy to use at home with real-time monitoring.",
+                title: "Integrated Monitoring",
+                text: "Monitor heart rate, blood pressure, and stress levels seamlessly from one device.",
               },
               {
-                title: "Clinical Accuracy",
-                text: "Precision and reliability comparable to hospital-grade equipment.",
+                title: "Smart Health Sync",
+                text: "Connect to your mobile app for real-time data tracking, reports, and cloud storage.",
               },
             ].map((f, i) => (
               <div className="col-md-4" key={i}>
@@ -107,39 +119,57 @@ export default function Home() {
             <div className="col-md-6 text-center">
               <img
                 src="/ecg-device.png"
-                alt="Portable ECG Device"
+                alt="AI Portable ECG Device"
                 className="img-fluid rounded shadow"
               />
             </div>
             <div className="col-md-6">
-              <h2 className="fw-bold mb-3">The Portable ECG Device</h2>
+              <h2 className="fw-bold mb-3 text-teal">Meet the Future of ECG</h2>
               <p className="text-muted">
-                Designed to make cardiac monitoring effortless. Capture your ECG
-                anytime, anywhere, and let our AI-powered app analyze it for
-                instant insights into your heart health.
+                Compact, intelligent, and clinically accurate. Our AI-powered ECG
+                device brings hospital-grade cardiac diagnostics to your
+                fingertips — without the wires or wait.
               </p>
-              <ul>
-                <li>48+ hours continuous recording</li>
-                <li>Bluetooth sync to mobile app</li>
-                <li>Encrypted & privacy-first</li>
+              <ul className="text-muted">
+                <li>Up to 48 hours continuous tracking</li>
+                <li>Seamless Bluetooth data sync</li>
+                <li>Instant AI report generation</li>
               </ul>
-              <a href="#contact" className="btn btn-teal mt-3">
-                Request Demo
+              <a href="#preorder" className="btn btn-teal mt-3">
+                Preorder Now
               </a>
             </div>
           </div>
         </div>
       </section>
 
+      {/* PREORDER */}
+      <section id="preorder" className="py-5 bg-dark text-light text-center">
+        <div className="container">
+          <h2 className="fw-bold mb-3 text-teal">
+            Preorder the Next Evolution in Health Technology
+          </h2>
+          <p className="lead mx-auto" style={{ maxWidth: 700 }}>
+            Be among the first to experience the new wave of personal
+            healthcare. Join hundreds of early adopters eagerly awaiting this
+            breakthrough device designed to make ECG and health monitoring
+            effortless, intelligent, and accessible.
+          </p>
+          <a href="#contact" className="btn btn-light mt-3 fw-bold">
+            Join the Waitlist
+          </a>
+        </div>
+      </section>
+
       {/* MISSION */}
       <section id="mission" className="py-5 bg-light text-center">
         <div className="container">
-          <h2 className="fw-bold mb-3">Our Mission</h2>
+          <h2 className="fw-bold mb-3">Our Vision</h2>
           <p className="text-muted mx-auto" style={{ maxWidth: 700 }}>
-            At CareTech Innovation, our mission is to bridge the gap between
-            medical technology and accessibility. We empower individuals with
-            tools that make health monitoring simple, accurate, and available to
-            everyone.
+            At CareTech Innovation, we aim to bridge the gap between medical
+            science and everyday convenience. Our mission is to empower
+            individuals with cutting-edge AI tools that make healthcare more
+            proactive, data-driven, and life-enhancing.
           </p>
         </div>
       </section>
@@ -147,7 +177,10 @@ export default function Home() {
       {/* CONTACT */}
       <section id="contact" className="py-5">
         <div className="container text-center">
-          <h2 className="fw-bold mb-3">Get in Touch</h2>
+          <h2 className="fw-bold mb-3 text-teal">Get in Touch</h2>
+          <p className="text-muted mb-4">
+            Have questions or want to partner with us? Let’s connect.
+          </p>
           <form
             className="mx-auto"
             style={{ maxWidth: 600 }}
